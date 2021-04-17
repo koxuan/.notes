@@ -1,0 +1,93 @@
+
+battery
+
+/sys/class/power_supply/BAT0/charge_start_threshold
+/sys/class/power_supply/BAT0/charge_stop_threshold
+sound (input and output) pavucontrol (GUI)
+https://www.thinkwiki.org/wiki/Maintenance#Battery_treatment
+
+Arch Installation
+
+Legacy Bios Boot(GRUB)
+
+grub-mkconfig -o grub.cfg /boot/grub/grub.cfg os-prober -> windows 10
+grub installed at front for mbr(overwrites windows bootloader)
+for efi, it installs grub in a standalone partition label EFI(FAT32).
+config can be in the partition or in a /boot/grub/ of arch linux os
+kernel parameters(https://wiki.archlinux.org/index.php/Kernel_parameters#Grub)
+
+dhcpcd required for ip address(even for ethernet)
+
+PS1 Shell Prompt Customization https://forum.manjaro.org/t/solved-how-to-show-the-current-working-dir-next-to-my-username-in-terminal/40659
+
+curl
+
+-L to follow redirects
+
+windows virtualbox vnc
+rdp -> rdesktop vnc client to windows boxes
+
+neomutt
+
+ctl j k -> up down different inboxes (Spam, Sent, Inbox) -> ctl o to open
+L to limit -> can only limit subject and sender
+L -> ~b <search term> search body for keyword(regex) ~B -> whole message
+https://neomutt.org/guide/advancedusage.html -> Limiting pattern
+T to view attachment in text
+o to sync
+
+bash
+https://wiki.bash-hackers.org/
+https://tldp.org/LDP/abs/html/sha-bang.html
+
+virtualbox
+install linux-headers
+
+X11 forwarding ssh
+install xorg-server
+enable x11 forwading for sshd.service
+use -X for client
+
+notify-send
+cron (requires dbus configuration) -> systemd dbus and x display (see breakfastCD.sh)
+
+tmux
+prefix square bracket -> copy mode (enter to leave)
+prefix s -> show all sessions
+prefix t -> show time
+
+amd gpu overclock
+requre kernel parameters -> (https://wiki.archlinux.org/index.php/AMDGPU#Overclocking)
+amdgpu-clocks
+make config file at /etc/default/amd* -> see(https://github.com/sibradzic/amdgpu-clocks)
+links
+https://www.reddit.com/r/Amd/comments/9t05vs/linuxamdgpu_rx580_powerplay_profiles/
+https://www.reddit.com/r/Amd/comments/agwroj/how_to_overclock_your_amd_gpu_on_linux/
+
+amd eth mining
+https://github.com/Lolliedieb/lolMiner-releases/releases
+
+ffmpeg
+extract -> ffmpeg -i ~/zoom_1.mp4 -ss 00:00:00 -t 00:02:50 -c:v copy -c:a copy ~/zoom_5.mp4
+
+ssh mining@116.15.96.47 -p 8237
+
+delimitMate -> vim plug
+let delimitMate_expand_cr = 1 -> auto expand with curly braces
+
+dns
+if can ping 8.8.8.8 but not google.com, it means that dns is not working properly. Figure out how to configure it. mac -> scutil https://apple.stackexchange.com/questions/324584/how-to-change-nameserver-in-resolv-conf-in-recovery-mode
+
+git
+git status uno -> ignore untracked files/folders
+git checkout -b branch-name -> create new branch
+
+ls
+ls -p -> shows only files
+
+grep
+grep -v -> inverse search
+\\. escape the character since . means every character in regex
+
+sh
+$(commands) -> allows you to store output as a variable
