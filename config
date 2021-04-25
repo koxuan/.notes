@@ -91,3 +91,18 @@ grep -v -> inverse search
 
 sh
 $(commands) -> allows you to store output as a variable
+
+vnc
+ssh -fL 9901:localhost:5901 10.1.10.2 sleep 10; vncviewer localhost:9901 -> closes sshtunnel after vnc ends
+
+vim
+inoremap jj <Esc>
+inoremap kk <Esc>
+inoremap ll <Esc>
+inoremap hh <Esc>
+
+teamviewer
+only version 12 can have gui without dm
+
+teams
+to change tenant, use the sign in other options and enter the domain you are guests at. Proceed to login to your account.
