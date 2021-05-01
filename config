@@ -78,6 +78,9 @@ let delimitMate_expand_cr = 1 -> auto expand with curly braces
 dns
 if can ping 8.8.8.8 but not google.com, it means that dns is not working properly. Figure out how to configure it. mac -> scutil https://apple.stackexchange.com/questions/324584/how-to-change-nameserver-in-resolv-conf-in-recovery-mode
 
+Figure out dns server you are using
+nslookup google.com
+
 git
 git status uno -> ignore untracked files/folders
 git checkout -b branch-name -> create new branch
@@ -106,3 +109,11 @@ only version 12 can have gui without dm
 
 teams
 to change tenant, use the sign in other options and enter the domain you are guests at. Proceed to login to your account.
+
+wpa_supplicant
+create config file at /etc/wpa_supplicant/wpa_supplicant.conf
+load conf -> sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_cli -> front end
+
+iwconfig
+get info of wireless interfaces
