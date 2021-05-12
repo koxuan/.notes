@@ -81,16 +81,19 @@ if can ping 8.8.8.8 but not google.com, it means that dns is not working properl
 Figure out dns server you are using
 nslookup google.com
 
-git
+*git
 git status uno -> ignore untracked files/folders
 git checkout -b branch-name -> create new branch
+git checkout [revision_hash] [file_name] -> checkout file of a commit
 
 ls
-ls -p -> shows only files
+ls -p -> add / to directories
+ls -altp | grep -v / | head -> gives most recent top 5 files 
 
 grep
 grep -v -> inverse search
 \\. escape the character since . means every character in regex
+grep -rnw '/path/to/somewhere/' -e 'pattern' -> recursively search for keywords in current pwd
 
 sh
 $(commands) -> allows you to store output as a variable
@@ -117,3 +120,17 @@ wpa_cli -> front end
 
 iwconfig
 get info of wireless interfaces
+
+diff
+diff <("$a") <("$b") -> diff 2 variable
+
+no output for shell script
+>/dev/null 2>&1 https://askubuntu.com/questions/12098/what-does-outputting-to-dev-null-accomplish-in-bash-scripts
+
+markdown
+<s>textyouwanttostrikethrough<s> -> strikethrough
+
+du -sh * -> get size of all files and folders in current path
+
+pdftk
+pdftk 1.pdf 2.pdf cat output output.pdf -> merge 2 pdf into 1 (can do more than 2)
