@@ -17,6 +17,8 @@ There is a way to bring element to the back, have not experimented with it.
 
 *** be careful of no testcases question and setting T = 1; You also need to remove the cin >> T before that.
 
+be careful of cin >> temp, then breaking when answer is set. Has ocured many times
+
 GCD
 great common divisor
 when two have no factors that are same base for example one has 2 to the power of x and the other only has 3 to the power of x, GCD = 1.
@@ -38,3 +40,13 @@ get the precalculated xor for each i
 For eg to check 3 partition of xor for equality:
 i represents first element of second partition, j represents first element of 3rd partition
 if(prefix[i-1]==(prefix[j-1]^prefix[i-1]) && prefix[i-1] == (prefix[n-1]^prefix[j-1]))
+
+string 
+string(10, 'y') -> yyyyyyyyyy
+
+* common substring
+
+get all substrings of first string using two for loops
+use find to see if substring matches substring in second string
+
+

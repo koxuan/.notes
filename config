@@ -88,7 +88,7 @@ git checkout [revision_hash] [file_name] -> checkout file of a commit
 
 ls
 ls -p -> add / to directories
-ls -altp | grep -v / | head -> gives most recent top 5 files 
+ls -altp | grep -v / | head -> gives most recent top 10 files 
 
 grep
 grep -v -> inverse search
@@ -134,3 +134,6 @@ du -sh * -> get size of all files and folders in current path
 
 pdftk
 pdftk 1.pdf 2.pdf cat output output.pdf -> merge 2 pdf into 1 (can do more than 2)
+
+* rosrun
+rosrun bag_recorder bag_recorder_node _configuration_directory:=/home/vagrant/catkin_ws/src/bag_recorder/config/ _data_directory:=/home/vagrant/
