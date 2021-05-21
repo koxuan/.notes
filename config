@@ -20,9 +20,10 @@ dhcpcd required for ip address(even for ethernet)
 
 PS1 Shell Prompt Customization https://forum.manjaro.org/t/solved-how-to-show-the-current-working-dir-next-to-my-username-in-terminal/40659
 
-curl
+* curl
 
 -L to follow redirects
+curl http://url.com -o file -> save content into file
 
 windows virtualbox vnc
 rdp -> rdesktop vnc client to windows boxes
@@ -51,10 +52,12 @@ use -X for client
 notify-send
 cron (requires dbus configuration) -> systemd dbus and x display (see breakfastCD.sh)
 
-tmux
+* tmux
 prefix square bracket -> copy mode (enter to leave)
 prefix s -> show all sessions
 prefix t -> show time
+tmux new-session -d -s "myTempSession" /opt/my_script.sh -> run script in new session, self destruct after script ends.
+prefix x -> destroy window
 
 amd gpu overclock
 requre kernel parameters -> (https://wiki.archlinux.org/index.php/AMDGPU#Overclocking)
@@ -70,7 +73,9 @@ https://github.com/Lolliedieb/lolMiner-releases/releases
 ffmpeg
 extract -> ffmpeg -i ~/zoom_1.mp4 -ss 00:00:00 -t 00:02:50 -c:v copy -c:a copy ~/zoom_5.mp4
 
+* ssh
 ssh mining@116.15.96.47 -p 8237
+https://gist.github.com/scy/6781836 -> ssh tunnels in background
 
 delimitMate -> vim plug
 let delimitMate_expand_cr = 1 -> auto expand with curly braces
@@ -85,6 +90,7 @@ nslookup google.com
 git status uno -> ignore untracked files/folders
 git checkout -b branch-name -> create new branch
 git checkout [revision_hash] [file_name] -> checkout file of a commit
+https://dev.to/couchcamote/git-branching-name-convention-cch -> branch naming conventions
 
 ls
 ls -p -> add / to directories
@@ -137,3 +143,17 @@ pdftk 1.pdf 2.pdf cat output output.pdf -> merge 2 pdf into 1 (can do more than 
 
 * rosrun
 rosrun bag_recorder bag_recorder_node _configuration_directory:=/home/vagrant/catkin_ws/src/bag_recorder/config/ _data_directory:=/home/vagrant/
+
+* tmux
+https://arcolinux.com/everything-you-need-to-know-about-tmux-reconstructing-tmux-sessions-after-restarts/
+prefix C-s -> save sessions
+prefix C-r -> restore sessions
+
+* vagrant
+vagrant up -> start vagrant vm
+vagrant init ubuntu/bionic64 -> download VagrantFile fo ubuntu bionic64
+vagant reload -> restart vm
+vagrant halt -> shutdown vm
+https://jonaspfannschmidt.com/copy_vagrant.html -> copy vagrant img to another system
+
+

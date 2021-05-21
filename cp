@@ -15,9 +15,13 @@ There is a way to bring element to the back, have not experimented with it.
   std::rotate(v.rbegin(), v.rbegin() + 1, v.rend());
 
 
-*** be careful of no testcases question and setting T = 1; You also need to remove the cin >> T before that.
+* note
+
+be careful of no testcases question and setting T = 1; You also need to remove the cin >> T before that.
 
 be careful of cin >> temp, then breaking when answer is set. Has ocured many times
+
+be careful of int overflow, use ll when cin >> if you are required to do arithmetic on input that are at least 10^4
 
 GCD
 great common divisor
@@ -49,4 +53,39 @@ string(10, 'y') -> yyyyyyyyyy
 get all substrings of first string using two for loops
 use find to see if substring matches substring in second string
 
+* equalize everything if you can only pass to the right
+two cycles is enough, if < mean, pass to right.
 
+* cuberoot 
+ll v = 	cbrtl(b);
+to prevent precision error:
+while(v*v*v < b) ++v;
+while(v*v*v > b) --v;
+
+* iota
+range creator [0,1,2,3,4] 
+std::iota(a.begin(), a.end(), 0);
+
+* odd even trick
+int p = i % 2
+can be used to enter odd partition or the even partition like this -> a[p] 
+
+
+* vector<ll>[2] a -> creates 2 empty array of vector<ll> -> use a[0].push_back() to add values into the vector of vectors;
+
+* vector erasing
+
+for (vector<Player>::iterator it=allPlayers.begin(); 
+                              it!=allPlayers.end(); 
+                              /*it++*/) <----------- I commented it.
+{
+
+   if(it->getpMoney()<=0) 
+      it = allPlayers.erase(it);
+  else 
+      ++it;
+ }
+
+* save indices of sorted array 
+
+https://stackoverflow.com/questions/1577475/c-sorting-and-keeping-track-of-indexes
