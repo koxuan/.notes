@@ -1,8 +1,10 @@
-rotate
+* rotate
 
 brings whatever in the middle of the element to the front
 
 rotate(start, element, end of element you want to bring forward)
+
+if you just want to bring some elements with certain conditions to the front, run two times with first time push back the elements with certain conditions to new array and second time the rest to the new array.
 
 for eg
 
@@ -22,6 +24,10 @@ be careful of no testcases question and setting T = 1; You also need to remove t
 be careful of cin >> temp, then breaking when answer is set. Has ocured many times
 
 be careful of int overflow, use ll when cin >> if you are required to do arithmetic on input that are at least 10^4
+
+read question carefully, it will bite you in the ass if you don't.
+
+register 1hr before, as 5 mins is not enough.
 
 GCD
 great common divisor
@@ -45,8 +51,9 @@ For eg to check 3 partition of xor for equality:
 i represents first element of second partition, j represents first element of 3rd partition
 if(prefix[i-1]==(prefix[j-1]^prefix[i-1]) && prefix[i-1] == (prefix[n-1]^prefix[j-1]))
 
-string 
+* string 
 string(10, 'y') -> yyyyyyyyyy
+when flipping a string, run the loop till < s.length()/2
 
 * common substring
 
@@ -54,7 +61,7 @@ get all substrings of first string using two for loops
 use find to see if substring matches substring in second string
 
 * equalize everything if you can only pass to the right
-two cycles is enough, if < mean, pass to right.
+two cycles is enough, if < mean, pass to right
 
 * cuberoot 
 ll v = 	cbrtl(b);
@@ -88,4 +95,33 @@ for (vector<Player>::iterator it=allPlayers.begin();
 
 * save indices of sorted array 
 
+stable_sort(idx.begin(), idx.end(), [&v](int i1, int i2) {return v[i1] > v[i2];});
+
 https://stackoverflow.com/questions/1577475/c-sorting-and-keeping-track-of-indexes
+
+AND & operator
+32 & 31 -> 0 
+when 2 to the power going down 1, it will result in 0 , same for and(ing) anything with 0
+see individual bits, then one 0 bit is sufficient to make the entire column 0.
+
+* to check if two pattern matches
+(a[i] == b[i]) != (a[i + 1] == b[i + 1]) -> where a and b are strings
+
+* string trick
+"YES\n" instead of "YES" << '\n'
+adding 0 to binary string -> "101010" + '0' -> to avoid access over or under the index
+
+*prefix flipping of 01 binary
+(a[i] == b[i]) != (a[i + 1] == b[i + 1]) && can flip trick (if segment mismatch) side by side implies that anything before is the same.
+1504b
+
+* upper bound vs lower bound
+can be used in multiset, set, vector
+lower gives you the direct match or else the next higher
+upper does not give you direct, even if it matches in value and gives the next higher
+
+*keep track of counters
+counters[a]++ -> count number of occurences of a particular number
+vector<int> counters[200] -> for loop this to get the ans by iterating through every count of numbers 0 - 199 (remainder of 200 = % 200 )
+
+
